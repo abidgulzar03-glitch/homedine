@@ -14,7 +14,7 @@ import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
 import CartSidebar from "./components/CartSidebar";
 import OrdersPage from "./Pages/OrdersPage";
-import ProfilePage from "./Pages/Profilepage";
+import ProfilePage from "./Pages/ProfilePage";
 
 function App() {
   const [cart, setCart] = useState([]);
