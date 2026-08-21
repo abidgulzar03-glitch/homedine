@@ -26,7 +26,6 @@ function ProfilePage() {
       [name]: value,
     }));
 
-    // Remove error for current field
     setErrors((current) => ({
       ...current,
       [name]: "",
@@ -35,7 +34,6 @@ function ProfilePage() {
     setMessage("");
   };
 
-  // Validate form
   const validateForm = () => {
     const newErrors = {};
 
@@ -45,15 +43,12 @@ function ProfilePage() {
     } else if (formData.fullName.trim().length < 3) {
       newErrors.fullName = "Name must be at least 3 characters.";
     }
-
-    // Email
     if (!formData.email.trim()) {
       newErrors.email = "Email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
       newErrors.email = "Enter a valid email address.";
     }
 
-    // Phone
     if (formData.phone.trim()) {
       if (!/^[0-9]{10}$/.test(formData.phone.trim())) {
         newErrors.phone = "Phone number must contain exactly 10 digits.";
@@ -123,25 +118,21 @@ function ProfilePage() {
 
         {message && <div className="profile-success">✓ {message}</div>}
 
-        {/* Profile View */}
         {!isEditing ? (
           <>
             <div className="profile-info-grid">
-              {/* Full Name */}
               <div className="profile-info-item">
                 <span className="profile-info-label">Full Name</span>
 
                 <span className="profile-info-value">{profile.fullName}</span>
               </div>
 
-              {/* Email */}
               <div className="profile-info-item">
                 <span className="profile-info-label">Email</span>
 
                 <span className="profile-info-value">{profile.email}</span>
               </div>
 
-              {/* Phone */}
               <div className="profile-info-item">
                 <span className="profile-info-label">Phone</span>
 
@@ -150,7 +141,6 @@ function ProfilePage() {
                 </span>
               </div>
 
-              {/* Member Since */}
               <div className="profile-info-item">
                 <span className="profile-info-label">Member Since</span>
 
@@ -158,7 +148,6 @@ function ProfilePage() {
               </div>
             </div>
 
-            {/* Action Buttons */}
             <div className="profile-actions">
               <button
                 type="button"
@@ -170,7 +159,6 @@ function ProfilePage() {
             </div>
           </>
         ) : (
-          /* Edit Form */
           <form className="profile-edit-form" onSubmit={handleSave} noValidate>
             {/* Full Name */}
             <div className="profile-form-group">
@@ -191,7 +179,6 @@ function ProfilePage() {
               )}
             </div>
 
-            {/* Email */}
             <div className="profile-form-group">
               <label htmlFor="email">Email</label>
 
@@ -208,7 +195,6 @@ function ProfilePage() {
               {errors.email && <p className="profile-error">{errors.email}</p>}
             </div>
 
-            {/* Phone */}
             <div className="profile-form-group">
               <label htmlFor="phone">Phone</label>
 
@@ -227,7 +213,6 @@ function ProfilePage() {
               {errors.phone && <p className="profile-error">{errors.phone}</p>}
             </div>
 
-            {/* Form Buttons */}
             <div className="profile-actions">
               <button type="submit" className="profile-save-btn">
                 ✓ Save Changes
