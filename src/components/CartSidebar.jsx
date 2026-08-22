@@ -15,7 +15,6 @@ function CartSidebar({
   const handleCheckout = () => {
     if (cart.length === 0) return;
 
-    // TODO: replace with your actual WhatsApp business number (country code + number, no + or spaces)
     const phoneNumber = "9797398157";
 
     const orderLines = cart
