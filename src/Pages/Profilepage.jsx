@@ -102,6 +102,7 @@ function ProfilePage() {
   return (
     <div className="profile-page">
       <div className="profile-page-card">
+        {/* Back to Home */}
         <Link to="/" className="profile-back-link">
           ←
         </Link>
