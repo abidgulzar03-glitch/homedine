@@ -13,7 +13,7 @@ import Sustainability from "./components/Sustainability";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
 import CartSidebar from "./components/CartSidebar";
-import ProfilePage from "./Pages/ProfilePage";
+import ProfilePage from "./Pages/ProfilePage.jsx";
 import OrdersPage from "./Pages/OrdersPage";
 
 function App() {
