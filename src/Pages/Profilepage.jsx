@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./ProfilePage.css";
 
 function ProfilePage() {
-  const navigate = useNavigate();
-
   const [isEditing, setIsEditing] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -104,7 +102,6 @@ function ProfilePage() {
   return (
     <div className="profile-page">
       <div className="profile-page-card">
-        {/* Back to Home */}
         <Link to="/" className="profile-back-link">
           ←
         </Link>

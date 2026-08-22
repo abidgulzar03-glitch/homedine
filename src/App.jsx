@@ -13,8 +13,8 @@ import Sustainability from "./components/Sustainability";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
 import CartSidebar from "./components/CartSidebar";
-import OrdersPage from "./Pages/OrdersPage";
 import ProfilePage from "./Pages/ProfilePage";
+import OrdersPage from "./Pages/OrdersPage";
 
 function App() {
   const [cart, setCart] = useState([]);
